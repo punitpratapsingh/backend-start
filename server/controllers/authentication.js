@@ -6,8 +6,8 @@
  * @todo The role specified is straight forward as of now.
  * It could be secured by using random string for each role of user.
  *
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 import { TokenUtility } from 'appknit-backend-bundle';
 

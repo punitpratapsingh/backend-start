@@ -1,7 +1,7 @@
 /**
  * This schema represents the users profile schema
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 import { Schema } from 'mongoose';
 import database from '../db';

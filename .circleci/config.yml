@@ -44,9 +44,9 @@ jobs:
           command: |
             docker --version
             docker login -u="$DOCKER_LOGIN" -p="$DOCKER_PASSWORD"
-            docker build -t {{docker_account}}/{{app_name}}:$CIRCLE_BRANCH --build-arg MACHINE_NAME={{app_name}}-$CIRCLE_BRANCH .
-            docker push {{docker_account}}/{{app_name}}:$CIRCLE_BRANCH
-            echo "Docker build made sucessfully!! for {{app_name}} $CIRCLE_BRANCH"
+            docker build -t {{docker_account}}/basic-crud:$CIRCLE_BRANCH --build-arg MACHINE_NAME=basic-crud-$CIRCLE_BRANCH .
+            docker push {{docker_account}}/basic-crud:$CIRCLE_BRANCH
+            echo "Docker build made sucessfully!! for basic-crud $CIRCLE_BRANCH"
 
       - run:
           name: Build Failure

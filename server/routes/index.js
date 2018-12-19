@@ -1,8 +1,8 @@
 /**
  * routes indexer.All the indexers will have the logic to load all the available files on the fly
  * present within the folder.
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 import fs from 'fs';
 

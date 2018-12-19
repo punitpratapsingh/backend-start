@@ -14,8 +14,8 @@ import {
  * This is a common function that could be used to create as
  * well as update the existing user.
  * of the new user. This will handle the profile completion process
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  *
  */
 export default ({

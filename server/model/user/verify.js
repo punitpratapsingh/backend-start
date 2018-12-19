@@ -8,8 +8,8 @@ import { UsersModel } from '../../schemas';
 const validProps = ['otpCode'];
 /**
  * @description handle the otp verificiation process
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 export default ({
 	id,

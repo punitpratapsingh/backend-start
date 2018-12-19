@@ -1,11 +1,11 @@
 # This is the production variant of
-# docker deployment for {{app_name}}
+# docker deployment for basic-crud
 version: '3'
 services:
 
   # development instance
   app:
-    image: index.docker.io/{{docker_account}}/{{app_name}}:development
+    image: index.docker.io/{{docker_account}}/basic-crud:development
     container_name: 'app'
     ports:
       - 3000:3000
@@ -16,7 +16,7 @@ services:
     environment:
       - NODE_ENV=production
       - MONGO_HOST=database
-      - MONGO_DB={{app_name}}
+      - MONGO_DB=basic-crud
     env_file:
       - .env
 

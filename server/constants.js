@@ -1,7 +1,7 @@
 /**
-* This is the {{app_name}} constant file
-* @author {{app_author}}
-* @since {{app_date}}
+* This is the basic-crud constant file
+* @author punit
+* @since 12th December 2018
 */
 
 export const {

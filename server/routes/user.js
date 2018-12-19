@@ -8,8 +8,8 @@ const prefix = '/api/users/';
 /**
  * @description
  * This is the route handler for the instructors
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 export default (app) => {
 	app.post(`${prefix}update`, MultipartService, AuthenticationControllers.authenticateUser, UserControllers.update);

@@ -1,7 +1,7 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "The backend code for {{app_name}}",
+  "description": "The backend code for basic-crud",
   "main": "server.js",
   "scripts": {
     "preinstall": "npm update",
@@ -59,12 +59,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/App-Knit/{{app_name}}.git"
+    "url": "https://github.com/App-Knit/basic-crud.git"
   },
   "author": "gaurav sharma",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/App-Knit/{{app_name}}.git/issues"
+    "url": "https://github.com/App-Knit/basic-crud.git/issues"
   },
-  "homepage": "https://github.com/App-Knit/{{app_name}}.git#readme"
+  "homepage": "https://github.com/App-Knit/basic-crud.git#readme"
 }

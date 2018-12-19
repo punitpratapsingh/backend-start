@@ -1,7 +1,7 @@
 /**
-* This is the server file for {{app_name}}
-* @author {{app_author}}
-* @since {{app_date}}
+* This is the server file for basic-crud
+* @author punit
+* @since 12th December 2018
 */
 import express from 'express';
 import busboyBodyParser from 'busboy-body-parser';
@@ -43,7 +43,7 @@ app.use(flash());
 ActivateRoutes(app);
 
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
-app.get('/', (req, res) => res.send(`<h1>{{app_name}} ${env} environment</h1>`));
+app.get('/', (req, res) => res.send(`<h1>basic-crud ${env} environment</h1>`));
 
 const port = process.env.NODE_ENV === 'development' ? 3000 : 3001;
 

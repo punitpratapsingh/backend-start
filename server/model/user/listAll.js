@@ -3,8 +3,8 @@ import { UsersModel } from '../../schemas';
 /**
  * @description
  * service model function to list down all the users registered on the platform.
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 export default ({
 	page = 1,

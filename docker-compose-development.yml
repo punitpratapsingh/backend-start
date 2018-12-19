@@ -1,24 +1,24 @@
 # This is the production variant of
-# docker deployment for {{app_name}}
+# docker deployment for basic-crud
 version: '3'
 services:
 
   # development instance
   app-development:
-    image: index.docker.io/{{docker_account}}/{{app_name}}:development
+    image: index.docker.io/{{docker_account}}/basic-crud:development
     container_name: 'app-development'
     ports:
       - 3000:3000
     environment:
       - NODE_ENV=development
       - MONGO_HOST=database
-      - MONGO_DB={{app_name}}-development
+      - MONGO_DB=basic-crud-development
       - HOST=http://{{aws_development}}/development/api/
     env_file:
       - .env
 
   app-admin:
-    image: index.docker.io/{{docker_account}}/{{app_name}}:development
+    image: index.docker.io/{{docker_account}}/basic-crud:development
     container_name: 'app-admin'
     ports:
       - 8001:8001

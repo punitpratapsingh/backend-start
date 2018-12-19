@@ -9,8 +9,8 @@ const validProps = ['phoneCode', 'phoneNumber'];
 /**
  * @description service model function to resend the verification
  * code in case it was not already received.
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 export default ({
 	id,

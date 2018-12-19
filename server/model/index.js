@@ -1,7 +1,7 @@
 /**
 * This is the indexer for model
-* @author {{app_author}}
-* @since {{app_date}}
+* @author punit
+* @since 12th December 2018
 */
 import fs from 'fs';
 

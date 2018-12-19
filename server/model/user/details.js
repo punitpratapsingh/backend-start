@@ -2,8 +2,8 @@ import { ResponseUtility } from 'appknit-backend-bundle';
 import UsersModel from '../../schemas/user';
 /**
  * @description service model function to fetch the details of the user
- * @author {{app_author}}
- * @since {{app_date}}
+ * @author punit
+ * @since 12th December 2018
  */
 export default ({
 	id,

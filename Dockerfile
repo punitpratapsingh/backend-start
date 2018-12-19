@@ -1,10 +1,10 @@
 FROM node:carbon
 
-ARG MACHINE_NAME={{app_name}}
-ENV MACHINE_NAME={{app_name}}
+ARG MACHINE_NAME=basic-crud
+ENV MACHINE_NAME=basic-crud
 
-WORKDIR /usr/src/{{app_name}}
-RUN mkdir -p /usr/src/{{app_name}}/logs
+WORKDIR /usr/src/basic-crud
+RUN mkdir -p /usr/src/basic-crud/logs
 
 # install app dependencies
 COPY package*.json ./
