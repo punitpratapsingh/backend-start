@@ -19,19 +19,23 @@ export default ({
 	gender,
 	nationality,
 	about,
-	picture,
+
 }) => new Promise((resolve, reject) => {
 	try {
 		const personObject = new PersonModel({
 			name,
-			phoneCode,
-			phoneNumber,
-			day,
-			month,
-			year,
+			mobile: {
+				code: phoneCode,
+				number: phoneNumber,
+			},
+			dob:  {
+				day, month, year,
+			} ,
 			gender,
 			nationality,
 			about,
+			registeredOn: getTime(),
+			lastUpdated: Date.now(),
 		});
 		personObject.save()
 			.then((success) => {
