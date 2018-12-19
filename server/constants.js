@@ -21,7 +21,7 @@ export const {
 	FARAYA_LONG,
 } = process.env;
 
-const db = process.env.MONGO_DB || 'faraya-app';
+const db = process.env.MONGO_DB || 'basic-crud';
 
 // export const mongoConnectionString = `mongodb://${host}:${port}/${db}`;
 export const mongoConnectionString = `mongodb://${ATLAS_USER}:${ATLAS_PASSWORD}@${CLUSTER1},${CLUSTER2},${CLUSTER3}/${db}?ssl=true&replicaSet=${SHARD}-shard-0&authSource=admin&retryWrites=true`;

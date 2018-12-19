@@ -2,7 +2,7 @@ import { PersonModel } from '../model';
 import { ModelResolver } from './resolvers';
 
 export default {
-	update: (req, res) => ModelResolver(req, res, PersonModel.PersonCreateService),
-	details: (req, res) => ModelResolver(req, res, PersonModel.PersonDetailsService),
-	listAll: (req, res) => ModelResolver(req, res, PersonModel.PersonListAllService),
+	update: (req, res) => ModelResolver(req, res, PersonModel.PersonsCreateService),
+	details: (req, res) => ModelResolver(req, res, PersonModel.PersonsDetailsService),
+	listAll: (req, res) => ModelResolver(req, res, PersonModel.PersonsListAllService),
 };

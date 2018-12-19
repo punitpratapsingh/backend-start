@@ -10,6 +10,7 @@ import PersonModel from '../../schemas/person';
  *
  */
 export default ({
+	name,
 	phoneCode,
 	phoneNumber,
 	day,
@@ -20,19 +21,25 @@ export default ({
 	about,
 	picture,
 }) => new Promise((resolve, reject) => {
-	const personObject = new PersonModel({
-		name,
-		phoneCode,
-		phoneNumber,
-		day,
-		month,
-		year,
-		gender,
-		nationality,
-		about,
-	});
-
-	personObject.save()
-		.then(() => resolve({ code: 100, message: 'User saved.' }))
-		.catch(err => reject({ code: 101, message: 'User not saved.', error: err }));
+	try {
+		const personObject = new PersonModel({
+			name,
+			phoneCode,
+			phoneNumber,
+			day,
+			month,
+			year,
+			gender,
+			nationality,
+			about,
+		});
+		personObject.save()
+			.then((success) => {
+				console.log(success);
+				resolve({ code: 100, message: 'User saved.' })
+			})
+			.catch(err => reject({ code: 101, message: 'User not saved.', error: err }));
+	} catch (err) {
+		return reject({ code: 101, error: err.message })
+	}
 });
