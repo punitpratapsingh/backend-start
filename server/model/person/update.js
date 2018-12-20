@@ -14,7 +14,7 @@ export default ({
 	
 }) => new Promise((resolve, reject) => {
 	try {
-		PersonModel.update()
+		PersonModel.findByIdAndUpdate({_id:userId},{ $set: { name: 'qwerty' }})
 			.then((success) => {
 				console.log(success);
 				resolve({ code: 100, message: 'person updated.' })
