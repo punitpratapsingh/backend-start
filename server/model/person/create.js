@@ -22,6 +22,9 @@ export default ({
 
 }) => new Promise((resolve, reject) => {
 	try {
+		if (!name || !(phoneCode && phoneNumber) || !(day && month && year)) {
+			reject({ code: 101, message: 'Missing required properties.' })
+		}
 		const personObject = new PersonModel({
 			name:{type:String,
 		          //required:true 	
@@ -34,19 +37,11 @@ export default ({
 			dob:  {
 				day, month, year,
 				//required:true
-			} 
-			,
-
-			validate: {
-				validator: function (name,mobile,dob) {
-					return name&&mobile&&dob===" "
-				},
-				message: 'You must entered these values to these field.'
-			},
+			} ,
 			gender,
 			nationality,
 			about,
-			registeredOn: getTime(),
+			registeredOn: Date.now(),
 			lastUpdated: Date.now(),
 		});
 		personObject.save()

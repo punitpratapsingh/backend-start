@@ -11,25 +11,10 @@ import PersonModel from '../../schemas/person';
  */
 export default ({
 	userId 
-
+	
 }) => new Promise((resolve, reject) => {
 	try {
-		const personModel=PersonModel({
-			name,
-			mobile: {
-				code: phoneCode,
-				number: phoneNumber,
-			},
-			dob:  {
-				day, month, year,
-			} ,
-			gender,
-			nationality,
-			about,
-			registeredOn: getTime(),
-			lastUpdated: Date.now(),
-		});
-		personModel.update()
+		PersonModel.update()
 			.then((success) => {
 				console.log(success);
 				resolve({ code: 100, message: 'person updated.' })
