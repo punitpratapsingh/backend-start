@@ -1,6 +1,9 @@
 
 import PersonModel from '../../schemas/person';
-
+import {
+	ResponseUtility,
+	
+} from 'appknit-backend-bundle';
 /**
  * @description service model function to handle the creation
  * This is a common function that could be used to create as
@@ -22,8 +25,14 @@ export default ({
 
 }) => new Promise((resolve, reject) => {
 	try {
-		if (!name || !(phoneCode && phoneNumber) || !(day && month && year)) {
+		/*if (!name || !(phoneCode && phoneNumber) || !(day && month && year)) {
 			reject({ code: 101, message: 'Missing required properties.' })
+		}*/
+
+		if (!id || !(phoneCode || phoneNumber || day || month
+			|| year || gender || nationality
+			|| about )) {
+			return reject(ResponseUtility.MISSING_PROPS({ message: 'Missing either of the required properties.' }));
 		}
 		const personObject = new PersonModel({
 			name:{type:String,
