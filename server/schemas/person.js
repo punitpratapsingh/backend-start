@@ -14,7 +14,7 @@ const Person = new Schema({
 		year: Number,
 	},
 	
-	gender: Number,
+	gender: String,
 	nationality: String,
 	about: String,
 	registeredOn: Number,
