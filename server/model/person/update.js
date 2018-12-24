@@ -23,7 +23,7 @@ export default ({
 
 }) => new Promise((resolve, reject) => {
 	try {
-		const updateObject = {};
+		/*const updateObject = {};
 		if (name) { updateObject.name = name; }
 		if (phoneCode && phoneNumber) {
 			updateObject.mobile = {
@@ -43,9 +43,17 @@ export default ({
 
 		if (nationality) { updateObject.nationality = nationality; }
 
-		if (about) { updateObject.about = about; }
-
-		PersonModel.findByIdAndUpdate({ _id: userId }, { $set: updateObject })
+		if (about) { updateObject.about = about; }*/
+		const serializeObject = SchemaMapperUtility({
+		  name,
+		  mobile:(phoneCode&&phoneNumber)?{phoneCode,phoneNumber}:undefined,
+		  dob:(day&&month&&year)?{day ,month , year}:undefined,
+		  gender,
+		  nationality,
+		  about
+		  
+		});
+		PersonModel.findByIdAndUpdate({ _id: userId }, { $set: /*updateObject*/serializeObject })
 			.then((success) => {
 				console.log(success);
 				resolve({ code: 100, message: 'person updated.' })
